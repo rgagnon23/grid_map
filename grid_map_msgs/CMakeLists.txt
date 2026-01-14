@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(grid_map_msgs)
 
-if("$ENV{ROS_VERSION}" STREQUAL "1")
-
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
@@ -48,6 +46,8 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 catkin_package(
+    #INCLUDE_DIRS include
+    #LIBRARIES
     CATKIN_DEPENDS
         geometry_msgs
         message_runtime
@@ -55,31 +55,3 @@ catkin_package(
     #DEPENDS
 )
 
-else() # ROS version 2
-
-set(PACKAGE_DEPENDENCIES
-  geometry_msgs
-  std_msgs
-)
-
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-foreach(PKG IN LISTS PACKAGE_DEPENDENCIES)
-  find_package(${PKG} REQUIRED)
-endforeach()
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/GridMapInfo.msg"
-  "msg/GridMap.msg"
-  "srv/SetGridMap.srv"
-  "srv/GetGridMap.srv"
-  "srv/GetGridMapInfo.srv"
-  "srv/ProcessFile.srv"
-  DEPENDENCIES ${PACKAGE_DEPENDENCIES}
-)
-
-ament_export_dependencies(rosidl_default_runtime)
-
-ament_package()
-
-endif()
