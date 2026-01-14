@@ -83,6 +83,7 @@ add_library(${PROJECT_NAME}
   src/LightIntensityFilter.cpp
   src/MathExpressionFilter.cpp
   src/SlidingWindowMathExpressionFilter.cpp
+  src/CVaRFilter.cpp
   src/DuplicationFilter.cpp
   src/DeletionFilter.cpp
   src/ColorFillFilter.cpp

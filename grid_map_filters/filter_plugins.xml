@@ -55,6 +55,11 @@
         Parse and evaluate a mathematical matrix expression within a sliding window on a layer of a grid map.
       </description>
     </class>
+    <class name="gridMapFilters/CVaRFilter" type="grid_map::CVaRFilter" base_class_type="filters::FilterBase<grid_map::GridMap>" >
+      <description>
+        Parse and evaluate the Conditional Value at Risk (CVaR) of a layer of a grid map.
+      </description>
+    </class>
     <class name="gridMapFilters/DuplicationFilter" type="grid_map::DuplicationFilter" base_class_type="filters::FilterBase<grid_map::GridMap>" >
       <description>
         Duplicate a layer of a grid map.

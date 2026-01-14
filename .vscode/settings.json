@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rigaga/mggplanner_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/PythonAPI/carla"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rigaga/mggplanner_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/PythonAPI/carla"
+    ]
+}

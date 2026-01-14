@@ -17,6 +17,7 @@
 #include "grid_map_filters/NormalVectorsFilter.hpp"
 #include "grid_map_filters/SetBasicLayersFilter.hpp"
 #include "grid_map_filters/SlidingWindowMathExpressionFilter.hpp"
+#include "grid_map_filters/CVaRFilter.hpp"
 #include "grid_map_filters/ThresholdFilter.hpp"
 
 PLUGINLIB_EXPORT_CLASS(grid_map::BufferNormalizerFilter, filters::FilterBase<grid_map::GridMap>)
@@ -36,4 +37,5 @@ PLUGINLIB_EXPORT_CLASS(grid_map::NormalColorMapFilter, filters::FilterBase<grid_
 PLUGINLIB_EXPORT_CLASS(grid_map::NormalVectorsFilter, filters::FilterBase<grid_map::GridMap>)
 PLUGINLIB_EXPORT_CLASS(grid_map::SetBasicLayersFilter, filters::FilterBase<grid_map::GridMap>)
 PLUGINLIB_EXPORT_CLASS(grid_map::SlidingWindowMathExpressionFilter, filters::FilterBase<grid_map::GridMap>)
+PLUGINLIB_EXPORT_CLASS(grid_map::CVaRFilter, filters::FilterBase<grid_map::GridMap>)
 PLUGINLIB_EXPORT_CLASS(grid_map::ThresholdFilter, filters::FilterBase<grid_map::GridMap>)
